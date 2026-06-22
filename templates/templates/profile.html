@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Farmer Profile</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f5fff7;
+padding:40px;
+}
+
+.box{
+max-width:800px;
+margin:auto;
+background:white;
+padding:35px;
+border-radius:20px;
+}
+
+.card{
+margin-top:20px;
+padding:20px;
+background:#f7fff8;
+border-radius:14px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-top:8px;
+margin-bottom:15px;
+}
+
+button{
+width:100%;
+padding:14px;
+background:#166534;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>👨‍🌾 Farmer Profile</h1>
+
+<form method="POST">
+
+<div class="card">
+
+<label>Name</label>
+
+<input
+type="text"
+name="name"
+value="{{ farmer_name }}"
+required
+>
+
+<label>Village</label>
+
+<input type="text">
+
+<label>Crop</label>
+
+<input type="text">
+
+<button type="submit">
+
+Save Profile
+
+</button>
+
+</div>
+
+</form>
+
+{% if saved %}
+
+<div class="card">
+
+✅ Profile Saved Successfully
+
+<br><br>
+
+<a href="/">
+
+Go To Home
+
+</a>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+
+</html>

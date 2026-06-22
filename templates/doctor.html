@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Krishi Doctor AI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
+
+body{
+
+background:
+linear-gradient(
+135deg,
+#eefbf2,
+#ffffff
+);
+
+padding:40px;
+
+}
+
+.container{
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+.hero{
+
+background:
+linear-gradient(
+135deg,
+#15803d,
+#166534
+);
+
+padding:35px;
+
+border-radius:30px;
+
+color:white;
+
+margin-bottom:24px;
+
+}
+
+.hero h1{
+
+font-size:36px;
+
+margin-bottom:10px;
+
+}
+
+.card{
+
+background:white;
+
+padding:28px;
+
+border-radius:24px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.06);
+
+}
+
+.upload{
+
+margin-top:20px;
+
+padding:40px;
+
+border:
+2px dashed #22c55e;
+
+border-radius:18px;
+
+text-align:center;
+
+}
+
+input{
+
+margin-top:20px;
+
+}
+
+button{
+
+margin-top:24px;
+
+padding:16px;
+
+width:100%;
+
+border:none;
+
+background:#15803d;
+
+color:white;
+
+font-size:18px;
+
+border-radius:14px;
+
+cursor:pointer;
+
+}
+
+.tip{
+
+margin-top:18px;
+
+color:#6b7280;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+
+<h1>🩺 Krishi Doctor AI</h1>
+
+<p>
+
+Upload crop image and get AI-powered diagnosis
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<form method="POST" enctype="multipart/form-data">
+
+<h3>Upload Crop Photo</h3>
+
+<div class="upload">
+
+📷
+
+<br><br>
+
+Select crop image
+
+<br>
+
+<input
+type="file"
+name="crop_image">
+
+</div>
+
+<button>
+
+Analyze Crop
+
+</button>
+
+</form>
+
+
+<div class="tip">
+
+Supported:
+Leaf • Fruit • Stem
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

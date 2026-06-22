@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Crop Journey</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins';
+}
+
+body{
+
+background:
+linear-gradient(
+135deg,
+#edfdf1,
+#f9fffa
+);
+
+min-height:100vh;
+
+padding:50px;
+
+}
+
+.container{
+
+max-width:900px;
+
+margin:auto;
+
+background:white;
+
+border-radius:30px;
+
+overflow:hidden;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.08);
+
+}
+
+.top{
+
+padding:40px;
+
+background:
+linear-gradient(
+135deg,
+#15803d,
+#166534
+);
+
+color:white;
+
+}
+
+.top h1{
+
+font-size:38px;
+
+margin-bottom:12px;
+
+}
+
+.top p{
+
+opacity:.9;
+
+line-height:1.7;
+
+}
+
+.form{
+
+padding:40px;
+
+display:grid;
+
+grid-template-columns:
+1fr
+1fr;
+
+gap:22px;
+
+}
+
+.field{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.full{
+
+grid-column:1/-1;
+
+}
+
+label{
+
+font-weight:600;
+
+margin-bottom:8px;
+
+color:#374151;
+
+}
+
+input,
+select{
+
+padding:15px;
+
+border-radius:14px;
+
+border:1px solid #ddd;
+
+font-size:15px;
+
+background:#fafafa;
+
+}
+
+input:focus,
+select:focus{
+
+outline:none;
+
+border-color:#16a34a;
+
+box-shadow:
+0 0 0 5px rgba(22,163,74,.12);
+
+background:white;
+
+}
+
+.info{
+
+background:#f7fff8;
+
+padding:16px;
+
+border-radius:14px;
+
+font-size:14px;
+
+color:#166534;
+
+line-height:1.7;
+
+}
+
+button{
+
+margin-top:10px;
+
+padding:18px;
+
+border:none;
+
+background:
+linear-gradient(
+135deg,
+#15803d,
+#166534
+);
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+border-radius:16px;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+button:hover{
+
+transform:translateY(-2px);
+
+}
+
+.small{
+
+font-size:13px;
+
+color:#6b7280;
+
+margin-top:12px;
+
+}
+
+@media(max-width:800px){
+
+.form{
+
+grid-template-columns:1fr;
+
+}
+
+.top h1{
+
+font-size:30px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="top">
+
+<h1>🌱 Smart Crop Journey</h1>
+
+<p>
+
+Tell us about your crop and farm.  
+Krishimitra AI will generate crop guidance,
+activity reminders and personalized recommendations.
+
+</p>
+
+</div>
+
+<form class="form" action="/result">
+
+<div class="field">
+
+<label>Crop Name</label>
+
+<select>
+
+<option>Select Crop</option>
+
+<option>Tomato</option>
+
+<option>Onion</option>
+
+<option>Soybean</option>
+
+<option>Cotton</option>
+
+<option>Rice</option>
+
+<option>Wheat</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>Crop Variety Name</label>
+
+<input
+placeholder=
+"Example: N-53, Abhinav, MAUS-71">
+
+</div>
+
+
+<div class="field">
+
+<label>Land Location for Weather Analysis</label>
+
+<input
+placeholder=
+"Village / Taluka / District">
+
+</div>
+
+
+<div class="field">
+
+<label>Area (Acres / Hectares)</label>
+
+<input
+placeholder=
+"Example: 2 Acres">
+
+</div>
+
+
+<div class="field">
+
+<label>Soil Type</label>
+
+<select>
+
+<option>Select</option>
+
+<option>Black Soil</option>
+
+<option>Red Soil</option>
+
+<option>Clay Soil</option>
+
+<option>Sandy Soil</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>Soil Test Status</label>
+
+<select>
+
+<option>Select</option>
+
+<option>Tested</option>
+
+<option>Not Tested</option>
+
+<option>Partially Tested</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>Irrigation Method</label>
+
+<select>
+
+<option>Select</option>
+
+<option>Drip</option>
+
+<option>Sprinkler</option>
+
+<option>Canal</option>
+
+<option>Rain-fed</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>Water Availability</label>
+
+<select>
+
+<option>Select</option>
+
+<option>Low</option>
+
+<option>Medium</option>
+
+<option>High</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>Farming Practice</label>
+
+<select>
+
+<option>Select</option>
+
+<option>Traditional</option>
+
+<option>Organic</option>
+
+<option>Conventional</option>
+
+<option>Mixed</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>Sowing Date</label>
+
+<input type="date">
+
+</div>
+
+
+<div class="full info">
+
+💡 More accurate inputs help generate better AI recommendations and reminders.
+
+</div>
+
+
+<div class="full">
+
+<button>
+
+Generate AI Guidance →
+
+</button>
+
+<div class="small">
+
+Estimated setup time:
+Less than 1 minute
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+</body>
+
+</html>
